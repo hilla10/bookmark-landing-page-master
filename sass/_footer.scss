@@ -1,0 +1,90 @@
+.footer {
+    background: $VeryDarkBlue;
+    padding: rem(30);
+
+    &-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include breakpointDown(mobile) {
+            flex-direction: column;
+        }
+
+        .flex-left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: -7px;
+            gap: rem(64);
+
+            @include breakpointDown(mobile) {
+                flex-direction: column;
+                gap: rem(30);
+            }
+
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: rem(45);
+
+                @include breakpointDown(mobile) {
+                    flex-direction: column;
+                    gap: rem(30);
+                    margin-bottom: rem(30);
+                }
+
+                a {
+                    color: $GrayishBlue;
+                    text-transform: uppercase;
+                    font-size: 15px;
+                    transition: color 0.3s ease-in-out;
+
+                    &:hover {
+                        color: $SoftRed;
+                    }
+                }
+            }
+
+            svg path {
+                fill: $white;
+            }
+        }
+
+        .flex-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: rem(39);
+            margin-right: rem(-5);
+
+            @include breakpointDown(mobile) {
+                margin-bottom: rem(20);
+            }
+
+            svg path {
+                transition: fill .3s ease-in-out;
+            }
+
+            a:hover svg path {
+                fill: $SoftRed;
+            }
+        }
+    }
+
+    p {
+        padding: rem(15) 0 rem(10);
+        text-align: center;
+        color: $white;
+
+        a {
+            color: $SoftRed;
+            transition: 0.3s ease-in-out;
+
+            &:hover {
+                color: $SoftBlue;
+            }
+        }
+    }
+}

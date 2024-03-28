@@ -1,0 +1,130 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    background: $white;
+    width: 100%;
+    height: 100vh;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: rem(1097);
+    margin: auto;
+
+    @include breakpointDown(tablet) {
+        max-width: 95%;
+
+        @include breakpointDown(mobile) {
+            max-width: 87%;
+        }
+
+    }
+}
+
+.btn {
+    font-family: "Rubik",
+        sans-serif;
+    cursor: pointer;
+    display: inline-block;
+    background: transparent;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    padding: rem(10) rem(32);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: all .4s cubic-bezier(.98, .36, .05, .58) !important;
+    font-size: rem(14);
+    font-weight: 600;
+
+    @media screen and (max-width: rem(468)) {
+        font-size: rem(13);
+    }
+}
+
+.btn-primary {
+    margin-right: -6px;
+    background: $SoftRed;
+    color: $white !important;
+    text-transform: uppercase;
+
+    &:hover {
+        color: $SoftRed !important;
+        outline: 2px solid $SoftRed;
+        background: transparent;
+    }
+
+}
+
+.btn-secondary {
+    background: $SoftBlue;
+    color: $white;
+
+    &:hover {
+        color: $SoftBlue;
+        outline: 2px solid $SoftBlue;
+        background: transparent;
+    }
+}
+
+.btn-default {
+    background: #f7f7f7;
+    color: $VeryDarkBlue;
+
+    &:hover {
+        color: $VeryDarkBlue;
+        outline: 2px solid $VeryDarkBlue;
+        background: transparent;
+    }
+}
+
+h1 {
+    font-size: rem(46);
+    padding-bottom: rem(22);
+
+    @media screen and (max-width: rem(468)) {
+        font-size: rem(32);
+    }
+}
+
+h2 {
+    font-size: rem(30);
+    padding-bottom: rem(24);
+}
+
+h4 {
+    font-weight: 400;
+    font-size: rem(16);
+    letter-spacing: 1px;
+    padding-left: 4px;
+    transition: color 0.3s ease-in-out;
+    text-align: left;
+}
+
+p {
+    letter-spacing: .91px;
+    font-size: rem(16);
+    line-height: 1.7;
+    padding-bottom: rem(34);
+}
+
+.primary-color {
+    color: $VeryDarkBlue;
+}
+
+.secondary-color {
+    color: $GrayishBlue;
+}
