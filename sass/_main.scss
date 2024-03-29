@@ -361,10 +361,18 @@
 
                 &.firefox {
                     margin-top: rem(40);
+
+                    @include breakpointDown(tablet) {
+                        margin-top: rem(20);
+                    }
                 }
 
                 &.opera {
                     margin-top: rem(80);
+
+                    @include breakpointDown(tablet) {
+                        margin-top: rem(20);
+                    }
                 }
             }
         }
